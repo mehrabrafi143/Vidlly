@@ -1,0 +1,38 @@
+﻿/*cutome*/
+.navbar-default {
+    background-color: #4b0082;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #FFFFFF;
+}
+
+    .navbar-default .navbar-nav > li > a:hover {
+        color: #451124;
+    }
+
+.navbar-default .navbar-brand {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+ody {
+    font-size: 16px;
+}
+
+.btnforadd {
+    padding: 10px 15px;
+    font-size: 1.6rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-danger {
+  background: #E8240C;
+}
+
+
+.removeborder:focus {
+    border: none;
+    outline: none
+}

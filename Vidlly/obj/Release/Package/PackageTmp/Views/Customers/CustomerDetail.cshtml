@@ -1,0 +1,19 @@
+﻿@model Vidlly.Models.Customer
+@{
+    ViewBag.Title = "CustomerDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-capitalize">Customer Detail</h1>
+@if (User.IsInRole("CanManageCustomers"))
+{
+    @Html.ActionLink("Edit","New","Customers",Model,null)
+}
+<hr/>
+<ul>
+    <li><b>Customer Name:</b> @Model.Name</li>
+    <li><b>Birthdate:</b> @Model.Birthdate.Value.ToString("D")</li>
+    <li><b>Discount Rate:</b> @Model.MemberShipType.DiscoutRate%</li>
+    <li><b>Membership Type:</b> @Model.MemberShipType.Name</li>
+    <li><b>Membership Price:</b> @Model.MemberShipType.Price$</li>
+</ul>

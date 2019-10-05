@@ -1,0 +1,27 @@
+﻿@using Vidlly.DTOs
+@using Vidlly.Models
+@model Vidlly.DTOs.MovieDTo
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@if (User.IsInRole("CanManageMovies"))
+{
+    @Html.ActionLink("Edit","Edit","Movies",new {Model.Id},null)
+}
+
+
+
+<h2>Details</h2>
+
+<hr />
+<ul>
+    <li><b>Movie Name:</b> @Model.Name</li>
+    <li><b>Day Of Added:</b> @Model.DayOfAdded.ToString("D")</li>
+    <li><b>Publish Date:</b> @Model.PublishDate.ToString("D")</li>
+    <li><b>Movie Type:</b> @Model.Gener.Name</li>
+</ul>
+
+
